@@ -21,7 +21,11 @@ function Expression(props: React.ComponentProps<'span'>) {
   const value = operator ? `${previousOperand} ${operator}` : previousOperand
 
   return (
-    <span className={cn('text-foreground-min text-sm', className)} {...rest}>
+    <span
+      aria-label="Previous expression"
+      className={cn('text-foreground-min text-sm', className)}
+      {...rest}
+    >
       {value}
     </span>
   )
@@ -32,7 +36,13 @@ function Result(props: React.ComponentProps<'span'>) {
   const currentOperand = useCalculatorStore((state) => state.currentOperand)
 
   return (
-    <span className={cn('text-foreground-max text-3xl font-semibold', className)} {...rest}>
+    <span
+      aria-label="Calculation result"
+      aria-live="polite"
+      className={cn('text-foreground-max text-2xl font-semibold sm:text-3xl', className)}
+      role="status"
+      {...rest}
+    >
       {currentOperand}
     </span>
   )
