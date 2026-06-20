@@ -21,7 +21,7 @@ const initialState: CalculatorState = {
 
 const calculatorStore = createStore<CalculatorStore>((set) => ({
   ...initialState,
-  set,
+  set: (state) => set(state),
   reset: () => set(initialState),
 }))
 

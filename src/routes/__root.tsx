@@ -1,5 +1,7 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 
+import { CalculatorHandler } from '@/components/handlers/calculator'
+
 import appCss from '../styles/global.css?url'
 
 export const Route = createRootRoute({
@@ -33,6 +35,7 @@ function RootDocument(props: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-sans antialiased">
+        <CalculatorHandler />
         {props.children}
         <Scripts />
       </body>

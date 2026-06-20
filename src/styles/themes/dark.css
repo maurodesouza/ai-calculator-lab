@@ -1,0 +1,40 @@
+.theme-dark {
+  /* base surfaces */
+  --base-1-bg: #0f172a;
+  --base-1-bg-support: #1e293b;
+  --base-2-bg: #1e293b;
+  --base-2-bg-support: #334155;
+
+  /* foregrounds */
+  --foreground-min: #64748b;
+  --foreground: #cbd5e1;
+  --foreground-max: #f8fafc;
+
+  /* rings */
+  --ring-inner: #334155;
+  --ring-outer: #475569;
+
+  /* brand palette */
+  --brand-100: #082f49;
+  --brand-200: #0c4a6e;
+  --brand-300: #075985;
+  --brand-400: #0284c7;
+  --brand-500: #38bdf8;
+  --brand-contrast: #0f172a;
+
+  /* success palette */
+  --success-100: #052e16;
+  --success-200: #14532d;
+  --success-300: #166534;
+  --success-400: #15803d;
+  --success-500: #4ade80;
+  --success-contrast: #0f172a;
+
+  /* danger palette */
+  --danger-100: #450a0a;
+  --danger-200: #7f1d1d;
+  --danger-300: #991b1b;
+  --danger-400: #b91c1c;
+  --danger-500: #f87171;
+  --danger-contrast: #0f172a;
+}
