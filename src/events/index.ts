@@ -1,15 +1,15 @@
 import { Events } from '@types'
 import { Handles } from './handles'
 
-type Callback = (payload: unknown) => void
-type Event = Events | keyof DocumentEventMap
+type Callback = (payload: any) => void
+type EventName = Events | keyof DocumentEventMap
 
 class EventsHandle extends Handles {
-  on(event: Event, callback: Callback) {
+  on(event: EventName, callback: Callback) {
     document.addEventListener(event, callback)
   }
 
-  off(event: Event, callback: Callback) {
+  off(event: EventName, callback: Callback) {
     document.removeEventListener(event, callback)
   }
 }
@@ -17,4 +17,4 @@ class EventsHandle extends Handles {
 const events = new EventsHandle()
 
 export { events }
-export type { Callback, Event }
+export type { Callback, EventName }

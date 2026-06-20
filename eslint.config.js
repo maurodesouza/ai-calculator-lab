@@ -73,5 +73,11 @@ export default tseslint.config(
     rules: {
       'import/no-default-export': 'off',
     },
+  },
+  {
+    files: ['src/events/index.ts'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
   }
 )
