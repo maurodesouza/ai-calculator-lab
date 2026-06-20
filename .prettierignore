@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+.tanstack
+package-lock.json
+src/routeTree.gen.ts
+.cta.json
+.devin
+
