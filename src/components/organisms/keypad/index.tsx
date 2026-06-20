@@ -7,7 +7,12 @@ import { Clickable } from '@/components/atoms/clickable'
 import { cn } from '@/utils/cn'
 import { twx } from '@/utils/twx'
 
-const Container = twx`grid grid-cols-4 gap-sm`
+const containerClasses = twx`grid grid-cols-4 gap-sm`
+
+function Container(props: React.ComponentProps<'div'>) {
+  const { className, ...rest } = props
+  return <div className={cn(containerClasses, className)} {...rest} />
+}
 
 type KeyAction =
   | { action: 'digit'; value: string }
