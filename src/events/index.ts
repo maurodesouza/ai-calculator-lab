@@ -1,4 +1,4 @@
-import { Events } from '@types/events'
+import { Events } from '@types'
 import { Handles } from './handles'
 
 type Callback = (payload: unknown) => void

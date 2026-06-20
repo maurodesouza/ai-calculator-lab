@@ -1,5 +1,5 @@
 import { config } from 'config'
-import { Events } from '@types/events'
+import { Events } from '@types'
 
 class BaseEventHandle {
   protected emit(event: Events, payload?: unknown) {

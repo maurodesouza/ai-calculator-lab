@@ -1,4 +1,4 @@
-import { Events } from '@types/events'
+import { Events } from '@types'
 import { BaseEventHandle } from './base'
 
 export type CalcDigitPayload = {
