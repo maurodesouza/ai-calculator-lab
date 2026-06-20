@@ -2,14 +2,6 @@
   "name": "ai-calculator-lab",
   "private": true,
   "type": "module",
-  "imports": {
-    "#/*": "./src/*",
-    "@events": "./src/events/index.ts",
-    "@events/*": "./src/events/*",
-    "@types": "./src/types/index.ts",
-    "@types/*": "./src/types/*",
-    "config": "./src/config/index.ts"
-  },
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
