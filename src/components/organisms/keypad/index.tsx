@@ -28,17 +28,45 @@ type KeypadKeyProps = React.ComponentProps<'button'> &
     variant?: 'solid' | 'subtle' | 'ghost' | 'outline'
   }
 
+function computeAriaLabel(
+  action: KeypadKeyProps['action'],
+  value?: string | number | readonly string[]
+) {
+  const stringValue = typeof value === 'string' ? value : undefined
+
+  if (action === 'digit') return `Digit ${stringValue}`
+  if (action === 'operator') {
+    const label =
+      stringValue === '/'
+        ? 'divide'
+        : stringValue === '*'
+          ? 'multiply'
+          : stringValue === '-'
+            ? 'subtract'
+            : 'add'
+    return label
+  }
+  if (action === 'decimal') return 'Decimal'
+  if (action === 'equals') return 'Equals'
+  if (action === 'clear') return 'Clear'
+  if (action === 'delete') return 'Delete'
+
+  return ''
+}
+
 function Key(props: KeypadKeyProps) {
   const { className, action, value, tone = 'neutral', variant = 'solid', ...rest } = props
 
   function onClick() {
+    const stringValue = typeof value === 'string' ? value : ''
+
     if (action === 'digit') {
-      events.calculator.digit({ value })
+      events.calculator.digit({ value: stringValue })
       return
     }
 
     if (action === 'operator') {
-      events.calculator.operator({ operator: value })
+      events.calculator.operator({ operator: stringValue })
       return
     }
 
@@ -64,6 +92,7 @@ function Key(props: KeypadKeyProps) {
 
   return (
     <Clickable.Button
+      aria-label={computeAriaLabel(action, value)}
       className={cn('h-14 w-full text-lg', className)}
       tone={tone}
       variant={variant}

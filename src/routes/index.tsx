@@ -11,7 +11,7 @@ export const Route = createFileRoute('/')({
 function CalculatorPage() {
   return (
     <main className="base-1 grid min-h-screen place-items-center bg-background-base p-md text-foreground">
-      <div className="base-2 w-full max-w-sm rounded-2xl border border-ring-inner bg-background-base p-md shadow-lg">
+      <div className="base-2 w-full max-w-xs rounded-2xl border border-ring-inner bg-background-base p-sm shadow-lg sm:max-w-sm sm:p-md">
         <div className="mb-sm flex items-center justify-between">
           <span className="text-sm font-semibold text-foreground-min">AI Calculator</span>
           <ThemeSwitch.Toggle />
@@ -71,8 +71,8 @@ function CalculatorPage() {
           <Keypad.Key action="digit" value="3">
             3
           </Keypad.Key>
-          <Keypad.Key action="operator" value="+" tone="brand" variant="subtle">
-            +
+          <Keypad.Key action="equals" tone="success" variant="solid">
+            =
           </Keypad.Key>
 
           <Keypad.Key action="digit" value="0" className="col-span-2">
