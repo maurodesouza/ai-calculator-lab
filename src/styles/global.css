@@ -1,7 +1,108 @@
 @import 'tailwindcss';
+@import './themes/index.css';
 
-@theme {
+@theme inline {
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  /* base tokens */
+  --color-background-base: var(--background-base);
+  --color-background-support: var(--background-support);
+  --color-foreground-min: var(--foreground-min);
+  --color-foreground: var(--foreground);
+  --color-foreground-max: var(--foreground-max);
+  --color-ring-inner: var(--ring-inner);
+  --color-ring-outer: var(--ring-outer);
+
+  /* tone tokens */
+  --color-tone-contrast-100: var(--tone-contrast-100);
+  --color-tone-contrast-200: var(--tone-contrast-200);
+  --color-tone-contrast-300: var(--tone-contrast-300);
+  --color-tone-contrast-400: var(--tone-contrast-400);
+  --color-tone-contrast-500: var(--tone-contrast-500);
+  --color-tone-luminosity-100: var(--tone-luminosity-100);
+  --color-tone-luminosity-200: var(--tone-luminosity-200);
+  --color-tone-luminosity-300: var(--tone-luminosity-300);
+  --color-tone-luminosity-400: var(--tone-luminosity-400);
+  --color-tone-luminosity-500: var(--tone-luminosity-500);
+  --color-tone-ring-inner: var(--tone-ring-inner);
+  --color-tone-ring-outer: var(--tone-ring-outer);
+  --color-tone-foreground-contrast: var(--tone-foreground-contrast);
+  --color-tone-foreground-context: var(--tone-foreground-context);
+
+  /* spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* radius */
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+.base-1 {
+  --background-base: var(--base-1-bg);
+  --background-support: var(--base-1-bg-support);
+  --foreground-min: var(--foreground-min);
+  --foreground: var(--foreground);
+  --foreground-max: var(--foreground-max);
+  --ring-inner: var(--ring-inner);
+  --ring-outer: var(--ring-outer);
+}
+
+.base-2 {
+  --background-base: var(--base-2-bg);
+  --background-support: var(--base-2-bg-support);
+  --foreground-min: var(--foreground-min);
+  --foreground: var(--foreground);
+  --foreground-max: var(--foreground-max);
+  --ring-inner: var(--ring-inner);
+  --ring-outer: var(--ring-outer);
+}
+
+.tone {
+  --tone-contrast-100: var(--tone-100);
+  --tone-contrast-200: var(--tone-200);
+  --tone-contrast-300: var(--tone-300);
+  --tone-contrast-400: var(--tone-400);
+  --tone-contrast-500: var(--tone-500);
+  --tone-luminosity-100: var(--tone-100);
+  --tone-luminosity-200: var(--tone-200);
+  --tone-luminosity-300: var(--tone-300);
+  --tone-luminosity-400: var(--tone-400);
+  --tone-luminosity-500: var(--tone-500);
+  --tone-ring-inner: var(--tone-300);
+  --tone-ring-outer: var(--tone-100);
+  --tone-foreground-contrast: var(--tone-contrast);
+  --tone-foreground-context: var(--tone-300);
+}
+
+.palette-brand {
+  --tone-100: var(--brand-100);
+  --tone-200: var(--brand-200);
+  --tone-300: var(--brand-300);
+  --tone-400: var(--brand-400);
+  --tone-500: var(--brand-500);
+  --tone-contrast: var(--brand-contrast);
+}
+
+.palette-success {
+  --tone-100: var(--success-100);
+  --tone-200: var(--success-200);
+  --tone-300: var(--success-300);
+  --tone-400: var(--success-400);
+  --tone-500: var(--success-500);
+  --tone-contrast: var(--success-contrast);
+}
+
+.palette-danger {
+  --tone-100: var(--danger-100);
+  --tone-200: var(--danger-200);
+  --tone-300: var(--danger-300);
+  --tone-400: var(--danger-400);
+  --tone-500: var(--danger-500);
+  --tone-contrast: var(--danger-contrast);
 }
 
 * {
