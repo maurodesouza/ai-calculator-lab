@@ -32,7 +32,8 @@ const buttonVariants = tv({
     {
       tone: "neutral",
       variant: "solid",
-      class: "bg-foreground-max text-background-base hover:bg-foreground",
+      class:
+        "base-1 bg-background-base text-foreground-max hover:bg-foreground",
     },
     {
       tone: "neutral",
