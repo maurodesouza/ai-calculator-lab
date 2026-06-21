@@ -1,9 +1,9 @@
-import { CalculatorHandleEvents } from './calculator'
-import { ThemeHandleEvents } from './theme'
+import { CalculatorHandleEvents } from "./calculator";
+import { ThemeHandleEvents } from "./theme";
 
 class Handles {
-  calculator = new CalculatorHandleEvents()
-  theme = new ThemeHandleEvents()
+  calculator = new CalculatorHandleEvents();
+  theme = new ThemeHandleEvents();
 }
 
-export { Handles }
+export { Handles };

@@ -1,1 +1,1 @@
-export type Placeholder = never
+export type Placeholder = never;

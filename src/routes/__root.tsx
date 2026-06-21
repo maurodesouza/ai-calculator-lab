@@ -1,10 +1,10 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 
-import { CalculatorHandler } from '@/components/handlers/calculator'
-import { KeyboardHandler } from '@/components/handlers/keyboard'
-import { ThemeHandler } from '@/components/handlers/theme'
+import { CalculatorHandler } from "@/components/handlers/calculator";
+import { KeyboardHandler } from "@/components/handlers/keyboard";
+import { ThemeHandler } from "@/components/handlers/theme";
 
-import appCss from '../styles/global.css?url'
+import appCss from "../styles/global.css?url";
 
 const THEME_INIT_SCRIPT = `
 (function() {
@@ -17,25 +17,25 @@ const THEME_INIT_SCRIPT = `
     document.documentElement.classList.add('theme-' + theme);
   } catch (e) {}
 })();
-`
+`;
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       {
-        charSet: 'utf-8',
+        charSet: "utf-8",
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
       },
       {
-        title: 'AI Calculator Lab',
+        title: "AI Calculator Lab",
       },
     ],
     links: [
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href: appCss,
       },
     ],
@@ -46,7 +46,7 @@ export const Route = createRootRoute({
     ],
   }),
   shellComponent: RootDocument,
-})
+});
 
 function RootDocument(props: { children: React.ReactNode }) {
   return (
@@ -62,5 +62,5 @@ function RootDocument(props: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }

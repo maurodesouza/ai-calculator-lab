@@ -1,19 +1,21 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 
-import { Display } from '@/components/atoms/display'
-import { ThemeSwitch } from '@/components/atoms/theme-switch'
-import { Keypad } from '@/components/organisms/keypad'
+import { Display } from "@/components/atoms/display";
+import { ThemeSwitch } from "@/components/atoms/theme-switch";
+import { Keypad } from "@/components/organisms/keypad";
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute("/")({
   component: CalculatorPage,
-})
+});
 
 function CalculatorPage() {
   return (
     <main className="base-1 grid min-h-screen place-items-center bg-background-base p-sm text-foreground sm:p-md">
       <div className="base-2 w-full max-w-xs rounded-2xl border border-ring-inner bg-background-base p-sm shadow-lg min-[320px]:max-w-sm min-[320px]:p-md">
         <div className="mb-sm flex items-center justify-between">
-          <span className="text-sm font-semibold text-foreground-min">AI Calculator</span>
+          <span className="text-sm font-semibold text-foreground-min">
+            AI Calculator
+          </span>
           <ThemeSwitch.Toggle />
         </div>
 
@@ -85,5 +87,5 @@ function CalculatorPage() {
         </Keypad.Container>
       </div>
     </main>
-  )
+  );
 }
