@@ -5,9 +5,8 @@ import * as React from 'react'
 import { events } from '@events'
 import { Clickable } from '@/components/atoms/clickable'
 import { cn } from '@/utils/cn'
-import { twx } from '@/utils/twx'
 
-const containerClasses = twx`grid grid-cols-4 gap-sm`
+const containerClasses = 'grid grid-cols-4 gap-sm'
 
 function Container(props: React.ComponentProps<'div'>) {
   const { className, ...rest } = props
@@ -93,7 +92,7 @@ function Key(props: KeypadKeyProps) {
   return (
     <Clickable.Button
       aria-label={computeAriaLabel(action, value)}
-      className={cn('h-14 w-full text-lg', className)}
+      className={cn('h-14 min-w-0 w-full text-lg', className)}
       tone={tone}
       variant={variant}
       onClick={onClick}

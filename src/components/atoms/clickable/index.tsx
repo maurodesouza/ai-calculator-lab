@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn'
 import { tv, type VariantProps } from '@/lib/tailwind-variants'
 
 const buttonVariants = tv({
-  base: 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-outer disabled:pointer-events-none disabled:opacity-50',
+  base: 'flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-outer disabled:pointer-events-none disabled:opacity-50',
   variants: {
     tone: {
       brand: 'tone palette-brand',

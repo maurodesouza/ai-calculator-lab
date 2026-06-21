@@ -10,8 +10,8 @@ export const Route = createFileRoute('/')({
 
 function CalculatorPage() {
   return (
-    <main className="base-1 grid min-h-screen place-items-center bg-background-base p-md text-foreground">
-      <div className="base-2 w-full max-w-xs rounded-2xl border border-ring-inner bg-background-base p-sm shadow-lg sm:max-w-sm sm:p-md">
+    <main className="base-1 grid min-h-screen place-items-center bg-background-base p-sm text-foreground sm:p-md">
+      <div className="base-2 w-full max-w-xs rounded-2xl border border-ring-inner bg-background-base p-sm shadow-lg min-[320px]:max-w-sm min-[320px]:p-md">
         <div className="mb-sm flex items-center justify-between">
           <span className="text-sm font-semibold text-foreground-min">AI Calculator</span>
           <ThemeSwitch.Toggle />
